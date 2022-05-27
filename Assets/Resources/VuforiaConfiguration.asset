@@ -23,20 +23,23 @@ MonoBehaviour:
     useDelayedLoadingObjectTargets: 0
     modelTargetRecoWhileExtendedTracked: 1
     version: 9.6.3
-    eulaAcceptedVersions: '{"Values":["","0.0","9.6"]}'
-    modelTargetMode: 0
+    eulaAcceptedVersions: '{"Values":["","0.0","9.6","8.5","9.4","8.1","9.5","10.0","10.2","7.1","7.2","7.5","7.7","8.0","8.6","9.2","9.1","10.5","9.3","10.6"]}'
   database:
     disableModelExtraction: 0
   videoBackground:
     numDivisions: 2
     videoBackgroundShader: {fileID: 4800000, guid: f40623b353e2f1943b1b3ba42975db7a,
       type: 3}
+    unlitShader: {fileID: 0}
     videoBackgroundEnabled: 1
   deviceTracker:
     autoStartTracker: 1
     arcoreRequirement: 1
     autoImportArcore: 1
   playmode:
+    mSequencePath: 
     playModeType: 0
   webcam:
     renderTextureLayer: 30
+  packageInformation:
+    ARFoundationVersion: 
