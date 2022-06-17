@@ -23,6 +23,9 @@ public class SystemLoading : MonoBehaviour
     public CanvasGroup groupLoading;
     #endregion
 
+    [Header("文字提示按任意鍵")]
+    public GameObject goTip;
+
     private void Awake()
     {
         // 載入按鈕 按下事件 添加監聽器(載入)
@@ -62,6 +65,19 @@ public class SystemLoading : MonoBehaviour
             textLoading.text = "Loading " + (ao.progress / 0.9f) * 100 + " %";
             // 等待 null 一個影格的時間
             yield return null;
+
+            // 如果 進度 >= 0.9f
+            if (ao.progress >= 0.9f)
+            {
+                goTip.SetActive(true);
+
+                // 如果按下任意鍵
+                if (Input.anyKey)
+                {
+                    // 允許載入場景
+                    ao.allowSceneActivation = true;
+                }
+            }
         }
     }
 }
